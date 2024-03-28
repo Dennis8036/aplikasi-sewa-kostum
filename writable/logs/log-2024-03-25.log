@@ -1,0 +1,214 @@
+CRITICAL - 2024-03-25 07:57:02 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\Home.php on line 185.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Kostum\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-25 07:57:19 --> Unmatched '}'
+in APPPATH\Controllers\Home.php on line 208.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Kostum\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-25 07:59:43 --> Unclosed '{' on line 9
+in APPPATH\Controllers\Home.php on line 221.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Kostum\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-25 08:22:06 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Kostum\app\Controllers\Home.php(165): App\Models\Gudang->tambah('tb_kostum', Array)
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->aksi_t_kostum()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-25 08:22:06 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_kostum` (`nama_kostum`, `harga`, `tanggal`, `stok`) VALUES (:nama_kostum:, :harga:, :tanggal:, :stok:)', [...], false)
+ 2 APPPATH\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Home.php(165): App\Models\Gudang->tambah('tb_kostum', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_t_kostum()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-25 08:22:14 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Kostum\app\Controllers\Home.php(165): App\Models\Gudang->tambah('tb_kostum', Array)
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->aksi_t_kostum()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-25 08:22:14 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_kostum` (`nama_kostum`, `harga`, `tanggal`, `stok`) VALUES (:nama_kostum:, :harga:, :tanggal:, :stok:)', [...], false)
+ 2 APPPATH\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Home.php(165): App\Models\Gudang->tambah('tb_kostum', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_t_kostum()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-25 08:22:25 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Kostum\app\Controllers\Home.php(165): App\Models\Gudang->tambah('tb_kostum', Array)
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->aksi_t_kostum()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-25 08:22:25 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_kostum` (`nama_kostum`, `harga`, `tanggal`, `stok`) VALUES (:nama_kostum:, :harga:, :tanggal:, :stok:)', [...], false)
+ 2 APPPATH\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Home.php(165): App\Models\Gudang->tambah('tb_kostum', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_t_kostum()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-25 08:22:55 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Kostum\app\Controllers\Home.php(165): App\Models\Gudang->tambah('tb_kostum', Array)
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->aksi_t_kostum()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-25 08:22:55 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_kostum` (`nama_kostum`, `harga`, `tanggal`, `stok`) VALUES (:nama_kostum:, :harga:, :tanggal:, :stok:)', [...], false)
+ 2 APPPATH\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Home.php(165): App\Models\Gudang->tambah('tb_kostum', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_t_kostum()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-25 09:47:01 --> Undefined property: stdClass::$id_user
+in APPPATH\Views\customer.php on line 53.
+ 1 APPPATH\Views\customer.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_user', 'C:\\Kostum\\app\\Views\\customer.php', 53)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Kostum\\app\\Views\\customer.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('customer', [], true)
+ 5 APPPATH\Controllers\Home.php(283): view('customer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->customer()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-25 09:50:27 --> mysqli_sql_exception: Unknown column 'id_user' in 'where clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(45): CodeIgniter\Database\BaseBuilder->getWhere('id_user')
+#5 C:\Kostum\app\Controllers\Home.php(295): App\Models\Gudang->getWhere('tb_customer', 'id_user')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->tambahcustomer()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-25 09:50:27 --> Unknown column 'id_user' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_customer`
+WHERE `id_user` IS NULL', [], false)
+ 2 APPPATH\Models\Gudang.php(45): CodeIgniter\Database\BaseBuilder->getWhere('id_user')
+ 3 APPPATH\Controllers\Home.php(295): App\Models\Gudang->getWhere('tb_customer', 'id_user')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahcustomer()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-25 09:50:41 --> mysqli_sql_exception: Unknown column 'id_user' in 'where clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(45): CodeIgniter\Database\BaseBuilder->getWhere('id_user')
+#5 C:\Kostum\app\Controllers\Home.php(295): App\Models\Gudang->getWhere('tb_customer', 'id_user')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->tambahcustomer()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-25 09:50:41 --> Unknown column 'id_user' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1748): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_customer`
+WHERE `id_user` IS NULL', [], false)
+ 2 APPPATH\Models\Gudang.php(45): CodeIgniter\Database\BaseBuilder->getWhere('id_user')
+ 3 APPPATH\Controllers\Home.php(295): App\Models\Gudang->getWhere('tb_customer', 'id_user')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->tambahcustomer()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-25 09:51:47 --> mysqli_sql_exception: Unknown column 'nama_lengkap' in 'field list' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Kostum\app\Controllers\Home.php(322): App\Models\Gudang->tambah('tb_customer', Array)
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->aksi_t_customer()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-25 09:51:47 --> Unknown column 'nama_lengkap' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_customer` (`nama_lengkap`, `username`, `password`, `id_level`) VALUES (:nama_lengkap:, :username:, :password:, :id_level:)', [...], false)
+ 2 APPPATH\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Home.php(322): App\Models\Gudang->tambah('tb_customer', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_t_customer()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')

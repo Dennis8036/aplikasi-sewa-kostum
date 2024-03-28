@@ -1,0 +1,731 @@
+CRITICAL - 2024-03-26 02:43:31 --> syntax error, unexpected token "else", expecting end of file
+in APPPATH\Views\kostum.php on line 99.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kostum', [], true)
+ 3 APPPATH\Controllers\Home.php(72): view('kostum', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->kostum()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 02:43:33 --> syntax error, unexpected token "else", expecting end of file
+in APPPATH\Views\kostum.php on line 99.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kostum', [], true)
+ 3 APPPATH\Controllers\Home.php(72): view('kostum', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->kostum()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 02:43:54 --> Unclosed '{' on line 68
+in APPPATH\Views\kostum.php on line 125.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('kostum', [], true)
+ 3 APPPATH\Controllers\Home.php(72): view('kostum', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->kostum()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 07:37:10 --> Undefined property: stdClass::$tanggal
+in APPPATH\Views\e_kostum.php on line 38.
+ 1 APPPATH\Views\e_kostum.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tanggal', 'C:\\Kostum\\app\\Views\\e_kostum.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Kostum\\app\\Views\\e_kostum.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('e_kostum', [], true)
+ 5 APPPATH\Controllers\Home.php(90): view('e_kostum', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->e_kostum('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 07:37:50 --> mysqli_sql_exception: Unknown column 'tanggal' in 'field list' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tb_kost...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_kost...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_kost...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_kost...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(34): CodeIgniter\Database\BaseBuilder->update(Array, Array)
+#5 C:\Kostum\app\Controllers\Home.php(121): App\Models\Gudang->edit('tb_kostum', Array, Array)
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->aksi_e_kostum()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 07:37:50 --> Unknown column 'tanggal' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2475): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_kostum` SET `nama_kostum` = :nama_kostum:, `harga` = :harga:, `tanggal` = :tanggal:, `stok` = :stok:
+WHERE `id_kostum` = :id_kostum:', [...], false)
+ 2 APPPATH\Models\Gudang.php(34): CodeIgniter\Database\BaseBuilder->update([...], [...])
+ 3 APPPATH\Controllers\Home.php(121): App\Models\Gudang->edit('tb_kostum', [...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_e_kostum()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 08:23:36 --> Unclosed '{' on line 7
+in APPPATH\Models\Gudang.php on line 82.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Kostum\\app\\Models\\Gudang.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Gudang')
+ 3 APPPATH\Controllers\Home.php(67): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Gudang')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->kostum()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:27:49 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admi...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:27:49 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:31:11 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admi...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:31:11 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:31:12 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admi...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:31:12 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:31:12 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admi...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:31:12 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:31:13 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admi...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:31:13 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:31:13 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admi...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:31:13 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:31:13 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admi...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:31:13 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:31:13 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admi...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:31:13 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:31:14 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admi...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:31:14 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:31:55 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_customer' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_cust...', 'tb_sewa.id_cust...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:31:55 --> Unknown column 'tb_sewa.id_customer' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_admin`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_sewa` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_admin', 'tb_customer', 'tb_kostum', 'tb_sewa', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 08:35:09 --> Too few arguments to function App\Models\Gudang::joinnelson(), 4 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_lelang', 'tb_customer', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 08:35:58 --> Too few arguments to function App\Models\Gudang::joinnelson(), 4 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 08:36:02 --> Too few arguments to function App\Models\Gudang::joinnelson(), 4 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:37:37 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_cust...', 'tb_sewa.id_admi...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:37:37 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_sewa`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_admin` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 08:38:17 --> syntax error, unexpected token "echo"
+in APPPATH\Controllers\Home.php on line 386.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Kostum\\app\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 08:38:34 --> Too few arguments to function App\Models\Gudang::joinnelson(), 1 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 08:38:51 --> Too few arguments to function App\Models\Gudang::joinnelson(), 2 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 08:54:44 --> mysqli_sql_exception: Unknown column 'nama_admin' in 'field list' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\Kostum\app\Controllers\Home.php(427): App\Models\Gudang->tambah('tb_sewa', Array)
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->aksi_t_sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 08:54:44 --> Unknown column 'nama_admin' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2308): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_sewa` (`nama_admin`, `username`, `password`, `id_level`) VALUES (:nama_admin:, :username:, :password:, :id_level:)', [...], false)
+ 2 APPPATH\Models\Gudang.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Home.php(427): App\Models\Gudang->tambah('tb_sewa', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_t_sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:01:05 --> Attempt to read property "nama_customer" on null
+in APPPATH\Views\e_customer.php on line 28.
+ 1 APPPATH\Views\e_customer.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_customer" on null', 'C:\\Kostum\\app\\Views\\e_customer.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Kostum\\app\\Views\\e_customer.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('e_customer', [], true)
+ 5 APPPATH\Controllers\Home.php(338): view('e_customer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->e_customer('0')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:23:03 --> Too few arguments to function App\Models\Gudang::joinnelson(), 3 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_sewa.id_customer=tb_customre.id_customer')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:23:16 --> Too few arguments to function App\Models\Gudang::joinnelson(), 4 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_sewa.id_customer=tb_customre.id_customer', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:23:21 --> Too few arguments to function App\Models\Gudang::joinnelson(), 4 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_sewa.id_customer=tb_customre.id_customer', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:23:31 --> Too few arguments to function App\Models\Gudang::joinnelson(), 4 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:24:19 --> Too few arguments to function App\Models\Gudang::joinnelson(), 4 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:28:05 --> Too few arguments to function App\Models\Gudang::joinnelson(), 4 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 6 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 09:29:52 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_cust...', 'tb_sewa.id_admi...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 09:29:52 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_sewa`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_admin` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:32:02 --> Too few arguments to function App\Models\Gudang::joinnelson(), 6 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_kostum', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:32:10 --> Too few arguments to function App\Models\Gudang::joinnelson(), 7 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_kostum', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 09:32:15 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_cust...', 'tb_sewa.id_admi...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 09:32:15 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_sewa`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_admin` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 09:39:39 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_kostum' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_cust...', 'tb_sewa.id_admi...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 09:39:39 --> Unknown column 'tb_sewa.id_kostum' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_sewa`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_admin` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:40:44 --> Undefined variable $id
+in APPPATH\Controllers\Home.php on line 468.
+ 1 APPPATH\Controllers\Home.php(468): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\Kostum\\app\\Controllers\\Home.php', 468)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_e_sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:41:27 --> Undefined variable $id
+in APPPATH\Controllers\Home.php on line 468.
+ 1 APPPATH\Controllers\Home.php(468): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\Kostum\\app\\Controllers\\Home.php', 468)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_e_sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:41:59 --> Undefined variable $id
+in APPPATH\Controllers\Home.php on line 468.
+ 1 APPPATH\Controllers\Home.php(468): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\Kostum\\app\\Controllers\\Home.php', 468)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_e_sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 09:42:03 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_cust...', 'tb_sewa.id_admi...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 09:42:03 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_sewa`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_admin` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+ERROR - 2024-03-26 09:42:07 --> mysqli_sql_exception: Unknown column 'tb_sewa.id_admin' in 'on clause' in C:\Kostum\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\Kostum\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Kostum\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Kostum\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Kostum\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Kostum\app\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Kostum\app\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_cust...', 'tb_sewa.id_admi...', 'tb_sewa.id_kost...', 'tb_sewa.id_sewa')
+#6 C:\Kostum\system\CodeIgniter.php(919): App\Controllers\Home->sewa()
+#7 C:\Kostum\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\Kostum\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Kostum\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Kostum\system\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\publi...')
+#11 {main}
+CRITICAL - 2024-03-26 09:42:07 --> Unknown column 'tb_sewa.id_admin' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_sewa`
+LEFT JOIN `tb_customer` ON `tb_sewa`.`id_customer`=`tb_customer`.`id_customer`
+LEFT JOIN `tb_admin` ON `tb_sewa`.`id_admin`=`tb_admin`.`id_admin`
+LEFT JOIN `tb_kostum` ON `tb_sewa`.`id_kostum`=`tb_kostum`.`id_kostum`
+ORDER BY `tb_sewa`.`id_sewa` DESC', [], false)
+ 2 APPPATH\Models\Gudang.php(66): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa', 'tb_customer', 'tb_admin', 'tb_kostum', 'tb_sewa.id_customer=tb_customer.id_customer', 'tb_sewa.id_admin=tb_admin.id_admin', 'tb_sewa.id_kostum=tb_kostum.id_kostum', 'tb_sewa.id_sewa')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:42:33 --> Too few arguments to function App\Models\Gudang::joinnelson(), 1 passed in C:\Kostum\app\Controllers\Home.php on line 385 and exactly 8 expected
+in APPPATH\Models\Gudang.php on line 60.
+ 1 APPPATH\Controllers\Home.php(385): App\Models\Gudang->joinnelson('tb_sewa')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
+CRITICAL - 2024-03-26 09:43:02 --> Undefined variable $id
+in APPPATH\Controllers\Home.php on line 468.
+ 1 APPPATH\Controllers\Home.php(468): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\Kostum\\app\\Controllers\\Home.php', 468)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->aksi_e_sewa()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Kostum\\public\\index.php')
